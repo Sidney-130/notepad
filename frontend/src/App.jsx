@@ -43,7 +43,7 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Navigate to="/signup" />} />
       </Routes>
     </BrowserRouter>
   );

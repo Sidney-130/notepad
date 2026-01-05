@@ -31,16 +31,30 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gray-50">
+    <div className="h-screen flex items-center justify-center p-4 bg-gray-50">
       <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
         <div className="mb-8">
           <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+              />
             </svg>
           </div>
-          <h1 className="text-2xl font-semibold text-gray-900 mb-1">Welcome back</h1>
-          <p className="text-gray-600 text-sm">Sign in to continue to Team Notes</p>
+          <h1 className="text-2xl font-semibold text-gray-900 mb-1">
+            Welcome back
+          </h1>
+          <p className="text-gray-600 text-sm">
+            Sign in to continue to Team Notes
+          </p>
         </div>
 
         {error && (
@@ -51,7 +65,10 @@ export default function Login() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-1.5"
+            >
               Email
             </label>
             <input
@@ -65,7 +82,10 @@ export default function Login() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700 mb-1.5"
+            >
               Password
             </label>
             <input
@@ -90,7 +110,10 @@ export default function Login() {
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
             Don't have an account?{" "}
-            <Link to="/signup" className="text-blue-500 hover:text-blue-600 font-medium">
+            <Link
+              to="/signup"
+              className="text-blue-500 hover:text-blue-600 font-medium"
+            >
               Sign up
             </Link>
           </p>

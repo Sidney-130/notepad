@@ -9,8 +9,13 @@ export const signup = async ({ email, password }) => {
     body: JSON.stringify({ email, password }),
   });
 
-  if (!res.ok) throw new Error("SignUp failed");
-  return res.json();
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw new Error(data.message || "Signup failed. Please try again.");
+  }
+
+  return data;
 };
 
 export const login = async ({ email, password }) => {
@@ -21,6 +26,12 @@ export const login = async ({ email, password }) => {
     },
     body: JSON.stringify({ email, password }),
   });
-  if (!res.ok) throw new Error("Login failed");
-  return res.json();
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw new Error(data.message || "Login failed. Please try again.");
+  }
+
+  return data;
 };

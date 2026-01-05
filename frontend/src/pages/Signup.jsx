@@ -44,16 +44,30 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gray-50">
+    <div className="h-screen flex items-center justify-center p-4 bg-gray-50">
       <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
         <div className="mb-8">
           <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+            <svg
+              className="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+              />
             </svg>
           </div>
-          <h1 className="text-2xl font-semibold text-gray-900 mb-1">Create account</h1>
-          <p className="text-gray-600 text-sm">Sign up to get started with Team Notes</p>
+          <h1 className="text-2xl font-semibold text-gray-900 mb-1">
+            Create account
+          </h1>
+          <p className="text-gray-600 text-sm">
+            Sign up to get started with Team Notes
+          </p>
         </div>
 
         {error && (
@@ -70,7 +84,10 @@ export default function Signup() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-1.5"
+            >
               Email
             </label>
             <input
@@ -84,7 +101,10 @@ export default function Signup() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700 mb-1.5"
+            >
               Password
             </label>
             <input
@@ -98,7 +118,10 @@ export default function Signup() {
           </div>
 
           <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label
+              htmlFor="confirmPassword"
+              className="block text-sm font-medium text-gray-700 mb-1.5"
+            >
               Confirm Password
             </label>
             <input
@@ -116,14 +139,19 @@ export default function Signup() {
             disabled={signupMutation.isPending}
             className="w-full bg-blue-500 text-white py-2.5 px-4 rounded-md font-medium hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm shadow-sm"
           >
-            {signupMutation.isPending ? "Creating account..." : "Create account"}
+            {signupMutation.isPending
+              ? "Creating account..."
+              : "Create account"}
           </button>
         </form>
 
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
             Already have an account?{" "}
-            <Link to="/login" className="text-blue-500 hover:text-blue-600 font-medium">
+            <Link
+              to="/login"
+              className="text-blue-500 hover:text-blue-600 font-medium"
+            >
               Sign in
             </Link>
           </p>
