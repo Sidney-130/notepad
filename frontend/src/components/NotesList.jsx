@@ -112,7 +112,7 @@ export default function NotesList() {
                           });
                         }
                       }}
-                      className="flex-1 px-3 py-2 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm shadow-sm"
+                      className="flex-1 px-3 py-2 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base shadow-sm"
                     />
                     <button
                       onClick={() =>
