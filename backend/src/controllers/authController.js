@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const { users } = require("../utils/users");
+const { users, saveUsers } = require("../utils/users");
 
 const signup = async (req, res, next) => {
   try {
@@ -42,6 +42,7 @@ const signup = async (req, res, next) => {
     };
 
     users.push(user);
+    saveUsers();
     res.status(201).json({ message: "Account created successfully" });
   } catch (err) {
     next(err);
