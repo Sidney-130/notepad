@@ -72,7 +72,7 @@ export default function NotesList() {
               if (e.key === "Enter" && text.trim())
                 createNoteMutation.mutate(text);
             }}
-            className="w-full flex-1 px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm shadow-sm"
+            className="w-full flex-1 px-4 py-3 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base shadow-sm"
           />
           <button
             onClick={() => createNoteMutation.mutate(text)}
