@@ -31,7 +31,7 @@ export default function Login() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-50">
+    <div className="h-screen flex items-center justify-center px-4 bg-gray-50">
       <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
         <div className="mb-8">
           <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
@@ -52,9 +52,7 @@ export default function Login() {
           <h1 className="text-2xl font-semibold text-gray-900 mb-1">
             Welcome back
           </h1>
-          <p className="text-gray-600 text-sm">
-            Sign in to continue to Team Notes
-          </p>
+          <p className="text-gray-600 text-sm">Sign in to continue Notepad</p>
         </div>
 
         {error && (
